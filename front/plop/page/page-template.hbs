@@ -1,0 +1,28 @@
+import { GetStaticProps } from 'next';
+
+// import { Component } from '@partials/{{getPath folder (createFilename name)}}/{{ name }}.styled';
+// import { use{{name}}Page } from '@partials/{{getPath folder (createFilename name)}}/{{ name }}.hook';
+// import { {{name}}PageLogic } from '@partials/{{getPath folder (createFilename name)}}/{{ name }}.logic';
+// import { {{name}}PageStore } from '@partials/{{getPath folder (createFilename name)}}/{{ name }}.store';
+
+interface {{name}}Props {
+    title: string;
+}
+
+export default function {{name}}(props: {{name}}Props) {
+
+    return (
+        <div>
+            <div>{{{name}}}</div>
+        </div>
+    );
+};
+
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+    return {
+        props: {
+            title: '{{name}}',
+        },
+    };
+};
