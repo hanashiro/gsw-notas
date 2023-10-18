@@ -4,14 +4,21 @@ import { Document } from 'mongoose';
 export type ClientDocument = Client & Document;
 
 @Schema({
-    timestamps: { createdAt: 'created', updatedAt: 'updated' },
+    timestamps: true,
+    collection: 'Clients',
 })
 export class Client {
-    @Prop({ required: true })
+    @Prop()
     name: string;
 
-    @Prop({ required: true })
+    @Prop()
     total: number;
+
+    @Prop()
+    withdrawals: {
+        date: Date;
+        amount: number;
+    }[];
 }
 
-export const ClientSchema = SchemaFactory.createForClass(Client);
+export const ClientsSchema = SchemaFactory.createForClass(Client);
