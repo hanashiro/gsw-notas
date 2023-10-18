@@ -23,6 +23,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.13",
     "@udecode/zustood": "^2.0.0",
+    "axios": "^1.5.1",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
