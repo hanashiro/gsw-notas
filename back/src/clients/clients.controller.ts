@@ -1,4 +1,4 @@
-import { Controller, Get, Patch, Param } from '@nestjs/common';
+import { Controller, Get, Patch, Param, Body } from '@nestjs/common';
 import { ClientsService } from './clients.service';
 import { CreateClientDto } from './dto/create-client.dto';
 import { UpdateClientDto } from './dto/update-client.dto';
@@ -13,7 +13,7 @@ export class ClientsController {
     }
 
     @Patch(':name')
-    update(@Param('name') name: string, @Param('amount') amount: number) {
+    update(@Param('name') name: string, @Body('amount') amount: number) {
         return this.clientsService.update(name, amount);
     }
 }
