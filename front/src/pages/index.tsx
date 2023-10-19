@@ -28,6 +28,7 @@ export default function Home() {
 
                         <Button
                             variant="contained"
+                            disabled={!username.trim()}
                             onClick={() => login(username)}
                         >
                             Entrar
