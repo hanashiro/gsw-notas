@@ -47,16 +47,10 @@ First, build the image:
     docker-compose build
 ```
 
-Install the dependencies:
-
-```bash
-    docker-compose run --rm front yarn install
-```
-
 Then, start the development server:
 
 ```bash
-    docker-compose up front
+    docker-compose up
 ```
 
 If you want to execute other NPM scripts, you can use this:
@@ -65,7 +59,7 @@ If you want to execute other NPM scripts, you can use this:
     docker-compose run --rm front [script name]
 ```
 
-Ex for database access:
+For database access:
 
 ```bash
     docker exec -it mongodb-notas mongosh -u "admin" -p "123456"
@@ -73,7 +67,7 @@ Ex for database access:
 
 ## DataBase
 
-To seed the database, run the following command:
+To seed the database, enter the `back` folder and run the following command:
 
 ```bash
 npm run seed
@@ -84,6 +78,8 @@ yarn run seed
 Make sure you have the database running.
 
 ## FRONT
+
+For this section, make sure to be in the `front` folder.
 
 ### Files Creation
 
