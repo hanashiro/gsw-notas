@@ -5,4 +5,7 @@ export class FormatterService {
             currency: 'BRL',
         }).format(value);
     }
+    static date(value: string) {
+        return Intl.DateTimeFormat('pt-BR').format(new Date(value));
+    }
 }
