@@ -2,7 +2,10 @@ import '@styles/globals.css';
 import type { AppProps } from 'next/app';
 import Providers from '@partials/_app/providers/_Providers';
 import Head from 'next/head';
+import { Inter } from 'next/font/google';
 import { useMemo } from 'react';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export default function App({
     Component,
@@ -25,9 +28,11 @@ export default function App({
                     content="minimum-scale=1, initial-scale=1, user-scalable=0, width=device-width, shrink-to-fit=no"
                 />
             </Head>
-            <Providers>
-                <Component {...pageProps} />
-            </Providers>
+            <div className={`${inter.className}`}>
+                <Providers>
+                    <Component {...pageProps} />
+                </Providers>
+            </div>
         </>
     );
 }
