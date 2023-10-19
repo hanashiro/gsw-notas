@@ -7,6 +7,8 @@ describe('FormatterService', () => {
     });
 
     it('should test date formmater', () => {
-        expect(FormatterService.date('2021-01-31 12:34:56')).toBe('31/01/2021');
+        expect(FormatterService.date('2023-10-19T01:42:18.746Z')).toBe(
+            '19/10/2023, 01:42:18',
+        );
     });
 });
